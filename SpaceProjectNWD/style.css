@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+body {
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    line-height: 1.5;
+  }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+#logo {
+    width: 70px;
+}
+
+#logo-box {
+    background-color: transparent;
+    margin:auto;
+    width: 70px;
+}
+
+.hamburger {
+    width: 40px;
+    height: 6px;
+    background-color: white;
+    margin: 5px 0;
+    z-index: 0;
+}
+
+#hamb {
+    padding: 10px;
+    background-color: #333333;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: 25%;
+    float: left;
+    cursor: pointer;
+}
+
+#main {
+    height: 63px;
+    background-color: lightgrey;
+    border: 1px solid grey;
+}
+
+/* background */
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 63px;
+    background-color: #80b3ff; /* fallback color */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+
+  #overlay-content-box{
+    margin: auto;
+    padding: 5px;
+    width: 100%;
+    background-color: lightgrey;
+  }
+
+  #overlay-content-box > a{
+      color: black;
+      font-size: 1.5em;
+      font-style: bold;
+      border: 1px solid darkgrey;
+      background-color: #bfbfbf;
+      outline: 0;
+  }
+  
+  #overlay-content-box > a:active{
+    text-decoration: none;
+    border: none;
+  }
+
+  #nvg {
+    margin-top: 20px;
+    margin: auto;
+    width: 50%;
+  }
+  
+  #closebtn {
+    position: absolute;
+    height: 0px;
+    font-style: bold;
+    top: -10px;
+    left: 15px;
+    font-size: 50px;
+    color: white;
+    user-select: none;
+  }
+
+  #closebtn-box {
+    z-index: 1;
+    padding: 10px;
+    background-color: #333333;
+    left: 25%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    visibility: hidden;
+    cursor: pointer;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+    #closebtn-box{
+      left: 0%;
+    }
+    #hamb{
+      left: 0%;
+    }
+    #nvg {
+      width: 100%;
+    }
+    #upper {
+      height: 50px;
+      border: 10px solid yellow;
+    }
+  }
+
+.container-fluid {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+h2{
+    font-family: 'Mukta', sans-serif;
+}
+
+.col-sm-12{
+  margin: auto;
+  text-align: center;
+  padding-top: 0px;
+}
+
+.container{
+    width: 40%;
+}
+
+@media only screen and (max-width: 1500px) {
+    .container{
+        width: 60%;
+    }
+    #nvg {
+      width: 60%;
+    }
+    #hamb{
+      left: 20%;
+    }
+    #closebtn-box{
+      left: 20%;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .container{
+        width: 100%;
+    }
+    #closebtn-box{
+      left: 10px;
+    }
+    #hamb{
+      left: 10px;
+    }
+    #nvg {
+      width: 100%;
+    }
+  }
+
+#navigation{
+    background-color: lightgray;
+    color:black;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#item3 {
+  width: 100%;
+}
+
+#poster {
+    background-image: url(images/nebula1.jpg) ;
+    background-color: #262626;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    padding-top: 30px;
+    color: white;
+    text-align: center;}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p{
+    text-align: justify;
+    font-family: 'Work Sans', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+/*gallery*/
+
+#item2 {
+	width: 100%;
+  height: 700px;
+  overflow: hidden;
+	margin: auto;
+  margin-top: 50px;
+}
+
+
+.galleryImage {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+
+#upper {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 600px;
+}
+
+#lower {
+  position: relative;
+  float: right;
+  background-color: lightgrey;
+  width: 100%;
+  height: 65px;
+  overflow: hidden;
+}
+
+#text-div {
+  position: relative;
+  top: 21px;
+  width: 400px;
+  margin: auto;
+  float: center;
+  text-align: center;
+}
+
+#title-box {
+  position: absolute;
+  top: 20px;
+}
+
+.mySlides {
+  position: absolute;
+}
+
+.arrow {
+  position: absolute;
+  width: 60px;
+  cursor: pointer;
+  padding: 16px;
+  margin-top: -31px;
+  top: 50%;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#right {
+  right: 0px;
+}
+
+.arrow:hover{
+  background-color: #80b3ff;
+}
+
+.title {
+  color: red;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+#item3 {
+  margin-top: 50px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.button{
+  background-color: #80b3ff;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 15px 10px;
+  outline: none;
+}
+
+.button:hover {
+  border-color: white;
+}
+
+.button.correct{
+  background-color: lightgreen;
+}
+
+.button.wrong{
+  background-color: red;
+}
+
+.start-btn, .next-btn{
+  font-size: 1.5em;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+#question {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
